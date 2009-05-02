@@ -32,7 +32,7 @@ namespace PostRankSharp
         {
             get
             {
-                return "http://api.postrank.com/v1/";
+                return "http://api.postrank.com/v2/feed/";
             }
         }
 
@@ -43,7 +43,7 @@ namespace PostRankSharp
         {
             get
             {
-                XNamespace ns = "http://aiderss.com/xsd/2007-11-30/aiderss-2007-11-30.xsd";
+                XNamespace ns = "http://www.postrank.com/xsd/2007-11-30/postrank-2007-11-30.xsd";
                 return ns;
             }
         }

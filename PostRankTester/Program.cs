@@ -30,9 +30,16 @@ namespace PostRankTester
             Console.WriteLine(String.Format("The PostRank of '{0}' is {1}", feed.ElementAt(5).Title, feed.ElementAt(5).PostRank));
 
             // Get the top post from the last month
-            PostRankItem topPost = PostRank.GetTopPosts(feedId, TopPostsPeriod.Month, 1).First();
+            PostRankItem topPost = PostRank.GetTopPosts(feedId, TopPostsPeriod.Month, 1).FirstOrDefault();
 
-            Console.WriteLine(String.Format("The top post in the last month is '{0}' with a PostRank of {1}", topPost.Title, topPost.PostRank));
+            if (topPost != null)
+            {
+                Console.WriteLine(String.Format("The top post in the last month is '{0}' with a PostRank of {1}", topPost.Title, topPost.PostRank));
+            }
+            else
+            {
+                Console.WriteLine("There haven't been any top posts in the last month");
+            }
 
 
             // Compare the PostRank's of several URLs

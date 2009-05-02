@@ -5,8 +5,19 @@ C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\CastRoller\AideRssDA\bi
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\CastRoller\AideRssDA\obj\Release\ResolveAssemblyReference.cache
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\CastRoller\AideRssDA\obj\Release\AideRssDA.dll
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\CastRoller\AideRssDA\obj\Release\AideRssDA.pdb
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\bin\Release\PostRankSharp.dll
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\bin\Release\PostRankSharp.pdb
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\bin\Release\UtilityLibrary.dll
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\bin\Release\MySql.Data.dll
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\bin\Release\UtilityLibrary.pdb
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\obj\Release\PostRankSharp.dll
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\obj\Release\PostRankSharp.pdb
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\bin\Release\PostRankSharp.dll
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\bin\Release\PostRankSharp.pdb
+C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\bin\Release\UtilityLibrary.dll
+C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\bin\Release\MySql.Data.dll
+C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\bin\Release\UtilityLibrary.pdb
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\obj\Release\ResolveAssemblyReference.cache
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\obj\Release\PostRankSharp.dll
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\obj\Release\PostRankSharp.pdb

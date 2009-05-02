@@ -27,7 +27,7 @@ namespace PostRankSharp
     /// <summary>
     /// Used to specify the level of posts to return for the Feed call
     /// </summary>
-    public enum PostRankLevel { All, Good, Great, Best };
+    public enum PostRankLevel { All = 0, Good = 2, Great=4, Best = 8};
 
     /// <summary>
     /// Contains calls to get PostRank data from PostRank.com
@@ -41,26 +41,48 @@ namespace PostRankSharp
         /// </summary>
         /// <param name="feedUrl">The url to get the Feed Id for</param>
         /// <returns>the PostRank feed Id for the given Feed Url</returns>
-        public static int GetFeedId(string feedUrl)
+        //public static int GetFeedId(string feedUrl)
+        //{
+        //    string url = Config.UrlBase + "feed_id?appkey=" + Config.ApiKey + "&format=xml&url=" + feedUrl;
+
+
+        //    XDocument doc = XDocument.Load(url);
+
+        //    if (doc.Descendants("error").Count() == 0)
+        //    {
+        //        var id = from result in doc.Descendants("feed_id")
+        //                 select Convert.ToInt32(result.Value.ToString());
+
+        //        return id.ToList()[0];
+        //    }
+        //    else
+        //    {
+        //        throw new Exception(doc.Descendants("error").First().Value);
+        //    }
+
+
+
+        //}
+
+
+        public static PostRankFeedInfo GetFeedInfo(string feedUrl)
         {
-            string url = Config.UrlBase + "feed_id?appkey=" + Config.ApiKey + "&format=xml&url=" + feedUrl;
+
+            string url = Config.UrlBase + "info?appkey=" + Config.ApiKey + "&format=xml&id=" + feedUrl;
 
 
             XDocument doc = XDocument.Load(url);
 
             if (doc.Descendants("error").Count() == 0)
             {
-                var id = from result in doc.Descendants("feed_id")
-                         select Convert.ToInt32(result.Value.ToString());
+                return (from info in doc.Descendants("results")
+                            select new PostRankFeedInfo(info)).First();
 
-                return id.ToList()[0];
             }
             else
             {
                 throw new Exception(doc.Descendants("error").First().Value);
             }
-
-
 
         }
 
@@ -71,10 +93,10 @@ namespace PostRankSharp
         /// <param name="period">The period to return posts from.</param>
         /// <param name="num">The number of posts to return.</param>
         /// <returns>the top posts for the specified time period and feed.</returns>
-        private static IEnumerable<PostRankItem> GetTopPosts(int feedId, string period, int num)
+        private static IEnumerable<PostRankItem> GetTopPosts(string feedHash, string period, int num)
         {
 
-            string url = Config.UrlBase + "top_posts?appkey=" + Config.ApiKey + "&format=rss&feed_id=" + feedId + "&period=" + period + "&num=" + num.ToString();
+            string url = Config.UrlBase + "top_posts?appkey=" + Config.ApiKey + "&format=rss&feed_id=" + feedHash + "&period=" + period + "&num=" + num.ToString();
 
             XDocument doc = XDocument.Load(url);
 
@@ -91,7 +113,7 @@ namespace PostRankSharp
         /// <param name="period">The period to return posts from.</param>
         /// <param name="num">The number of posts to return.</param>
         /// <returns>the top posts for the specified time period and feed.</returns>
-        public static IEnumerable<PostRankItem> GetTopPosts(int feedId, TopPostsPeriod period, int num)
+        public static IEnumerable<PostRankItem> GetTopPosts(string feedHash, TopPostsPeriod period, int num)
         {
             string periodString;
 
@@ -115,7 +137,7 @@ namespace PostRankSharp
                     break;
             }
 
-            return GetTopPosts(feedId, periodString, num);
+            return GetTopPosts(feedHash, periodString, num);
         }
 
         /// <summary>
@@ -125,9 +147,9 @@ namespace PostRankSharp
         /// <param name="period">The number of seconds in the past to return posts from.</param>
         /// <param name="num">The number of posts to return.</param>
         /// <returns>the top posts for the specified time period and feed.</returns>
-        public static IEnumerable<PostRankItem> GetTopPosts(int feedId, int periodSeconds, int num)
+        public static IEnumerable<PostRankItem> GetTopPosts(string feedHash, int periodSeconds, int num)
         {
-            return GetTopPosts(feedId, periodSeconds.ToString(), num);
+            return GetTopPosts(feedHash, periodSeconds.ToString(), num);
         }
 
         /// <summary>
@@ -136,9 +158,9 @@ namespace PostRankSharp
         /// </summary>
         /// <param name="feedId">Internal AideRSS feed ID</param>
         /// <returns></returns>
-        public static IEnumerable<PostRankItem> GetFeed(int feedId)
+        public static IEnumerable<PostRankItem> GetFeed(string feedHash)
         {
-            return GetFeed(feedId, PostRankLevel.All, 30, null);
+            return GetFeed(feedHash, PostRankLevel.All, 30, null);
         }
 
         /// <summary>
@@ -150,7 +172,7 @@ namespace PostRankSharp
         /// <param name="num">Number of entries to return.</param>
         /// <param name="start">(Optional) Entry to start returning from (for pagination).</param>
         /// <returns>entries for a specified feed ID, along with additional PostRank data</returns>
-        public static IEnumerable<PostRankItem> GetFeed(int feedId, PostRankLevel level, int num, int? start)
+        public static IEnumerable<PostRankItem> GetFeed(string feedHash, PostRankLevel level, int num, int? start)
         {
             string levelString;
 
@@ -171,7 +193,7 @@ namespace PostRankSharp
                     break;
             }
 
-            return GetFeed(feedId, levelString, num, start);
+            return GetFeed(feedHash, levelString, num, start);
         }
 
         /// <summary>
@@ -183,9 +205,9 @@ namespace PostRankSharp
         /// <param name="num">Number of entries to return.</param>
         /// <param name="start">(Optional) Entry to start returning from (for pagination).</param>
         /// <returns>entries for a specified feed ID, along with additional PostRank data</returns>
-        public static IEnumerable<PostRankItem> GetFeed(int feedId, decimal level, int num, int? start)
+        public static IEnumerable<PostRankItem> GetFeed(string feedHash, decimal level, int num, int? start)
         {
-            return GetFeed(feedId, level.ToString(), num, start);
+            return GetFeed(feedHash, level.ToString(), num, start);
         }
 
         /// <summary>
@@ -197,10 +219,10 @@ namespace PostRankSharp
         /// <param name="num">Number of entries to return.</param>
         /// <param name="start">(Optional) Entry to start returning from (for pagination).</param>
         /// <returns>entries for a specified feed ID, along with additional PostRank data</returns>
-        private static IEnumerable<PostRankItem> GetFeed(int feedId, string level, int num, int? start )
+        private static IEnumerable<PostRankItem> GetFeed(string feedHash, string level, int num, int? start )
         {
-            string url = Config.UrlBase + "feed?appkey=" + Config.ApiKey + "&format=rss&feed_id=" + feedId + "&level=" + level + "&num=" + num.ToString();
-
+            string url = String.Format("{0}{1}?format=rss&appkey={2}&level={3}&num={4}", Config.UrlBase, feedHash, Config.ApiKey, level, num);
+       
             if (start != null)
             {
                 url += String.Format("&start={0}", start.Value);
@@ -345,7 +367,7 @@ namespace PostRankSharp
                         case "all":
                             return 1;
                         default:
-                            throw new Exception("The given value was not a postRank");
+                            throw new Exception(String.Format("The given value, '{0}' was not a postRank", postRankString ));
 
                     }
                 }

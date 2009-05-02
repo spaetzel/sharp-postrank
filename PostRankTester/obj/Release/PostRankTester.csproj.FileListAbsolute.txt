@@ -5,3 +5,10 @@ C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankT
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankTester\obj\Release\ResolveAssemblyReference.cache
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankTester\obj\Release\PostRankTester.exe
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankTester\obj\Release\PostRankTester.pdb
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankTester\bin\Release\PostRankTester.exe
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankTester\bin\Release\PostRankTester.pdb
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankTester\bin\Release\PostRankSharp.dll
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankTester\bin\Release\PostRankSharp.pdb
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankTester\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankTester\obj\Release\PostRankTester.exe
+C:\Documents and Settings\William Spaetzel\My Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankTester\obj\Release\PostRankTester.pdb
