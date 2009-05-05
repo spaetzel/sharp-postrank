@@ -54,12 +54,6 @@
     <Compile Include="Config.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\CastRoller\UtilityLibrary\UtilityLibrary.csproj">
-      <Project>{3BA44332-3DDE-4DAC-A1AA-4B0C73C27E74}</Project>
-      <Name>UtilityLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

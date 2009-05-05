@@ -21,3 +21,8 @@ C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankS
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\obj\Release\ResolveAssemblyReference.cache
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\obj\Release\PostRankSharp.dll
 C:\Users\wspaetzel\Documents\Visual Studio 2008\Projects\PostRankSharp\PostRankSharp\obj\Release\PostRankSharp.pdb
+C:\Users\wspaetzel\Documents\Projects\PostRankSharp\PostRankSharp\bin\Release\PostRankSharp.dll
+C:\Users\wspaetzel\Documents\Projects\PostRankSharp\PostRankSharp\bin\Release\PostRankSharp.pdb
+C:\Users\wspaetzel\Documents\Projects\PostRankSharp\PostRankSharp\obj\Release\ResolveAssemblyReference.cache
+C:\Users\wspaetzel\Documents\Projects\PostRankSharp\PostRankSharp\obj\Release\PostRankSharp.dll
+C:\Users\wspaetzel\Documents\Projects\PostRankSharp\PostRankSharp\obj\Release\PostRankSharp.pdb
